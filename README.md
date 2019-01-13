@@ -21,10 +21,10 @@ npm publish
 
 ## Using systelab-schematics
 
-In order to use the schematics you must install the following dependency:
+In order to use the schematics you must install the following development dependency:
 
 ```
-npm i systelab-schematics
+npm i -D systelab-schematics
 ```
 
 In order to generate a new modal based on systelab-components, you must run the following angular cli command

@@ -1,6 +1,6 @@
 # systelab-schematics
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
+This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics.
 
 ## Working with the repo
 
@@ -18,3 +18,24 @@ In order to publish the library, an authorized npm user is required. Once set, u
 ```npm
 npm publish
 ```
+
+## Using
+
+In order to use the schematics you much install the following dependency:
+
+```
+npm i systelab-schematics
+```
+
+In order to generate a new modal based on systelab-components, you must run the following angular cli command
+
+```
+ng g dialog:dialog --name="patient management"
+```
+
+The schematic will:
+
+- Generate a patient-management folder
+- The files: patient-management-dialog.ts, patient-management-dialog.html and patient-management-dialog.scss
+
+The name for the selector will be name dashed, and the name of the components will be the name upper camel case.

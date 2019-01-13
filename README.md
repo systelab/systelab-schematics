@@ -47,7 +47,7 @@ The name for the selector will be name dashed, and the name of the components wi
 In order to generate a new grid based on systelab-components, you must run the following angular cli command
 
 ```
-ng g systelab-schematics:grid --name="patient details"
+ng g systelab-schematics:grid --name="patient details" --api="PatientDetailsService" --model="PatientDetail"
 ```
 
 The schematic will:
@@ -57,12 +57,16 @@ The schematic will:
 
 The name for the selector will be name dashed, and the name of the components will be the name upper camel case.
 
+If api is not set name upper camel case with the suffix 'Api' will be used.
+If model is not set name upper camel case with the suffix 'Data' will be used.
+
+
 ### Create ComboBox
 
 In order to generate a new combobox based on systelab-components, you must run the following angular cli command
 
 ```
-ng g systelab-schematics:combobox --name="patient details"
+ng g systelab-schematics:combobox --name="patient details" --api="PatientDetailsService" --model="PatientDetail"
 ```
 
 The schematic will:
@@ -71,6 +75,9 @@ The schematic will:
 - The files: patient-details-combobox.ts and patient-details-combobox-spec.ts
 
 The name for the selector will be name dashed, and the name of the components will be the name upper camel case.
+
+If api is not set name upper camel case with the suffix 'Api' will be used.
+If model is not set name upper camel case with the suffix 'Data' will be used.
 
 ### Example
 

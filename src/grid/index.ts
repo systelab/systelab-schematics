@@ -12,6 +12,14 @@ export function grid(options: any): Rule {
 			normalize(options.path) :
 			normalize(options.path + '/' + strings.dasherize(options.name)+'/grid');
 
+		const apiName = strings.classify(options.name)+'Api';
+		if (!options.api)
+			options.api=apiName;
+
+		const modelName = strings.classify(options.model)+'Data';
+		if (!options.model)
+			options.model=modelName;
+
 		const templateSource = apply(url('./files'), [
 			options.spec ? noop() : filter(path => !path.endsWith('.spec.ts')),
 			template({

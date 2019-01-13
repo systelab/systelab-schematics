@@ -7,15 +7,15 @@ import { AbstractApiComboBox } from 'systelab-components/widgets/combobox/abstra
 	templateUrl: '../../../../../node_modules/systelab-components/html/abstract-combobox.component.html'
 })
 
-export class <%= classify(name) %>ComboBox extends AbstractApiComboBox<<%= classify(name) %>Data> {
+export class <%= classify(name) %>ComboBox extends AbstractApiComboBox<<%= model %>> {
 
 
-	constructor(public myRenderer: Renderer2, public chref: ChangeDetectorRef, public api: <%= classify(name) %>Api) {
+	constructor(public myRenderer: Renderer2, public chref: ChangeDetectorRef, public api: <%= api %>) {
 		super(myRenderer, chref);
 	}
 
 	public getInstance() {
-		return new <%= classify(name) %>Data();
+		return new <%= model %>();
 	}
 
 	public getDescriptionField(): string {
@@ -30,7 +30,7 @@ export class <%= classify(name) %>ComboBox extends AbstractApiComboBox<<%= class
 		return 'fieldID';
 	}
 
-	public getData(page: number, itemsPerPage: number): Observable<Array<<%= classify(name) %>Data>> {
+	public getData(page: number, itemsPerPage: number): Observable<Array<<%= model %>>> {
 		return this.api.get<%= classify(name) %>List(page, itemsPerPage);
 	}
 

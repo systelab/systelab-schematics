@@ -25,6 +25,14 @@
         "index": 0
       }
     },
+    "api": {
+      "description": "Specifies the api name.",
+      "type": "string",
+    },
+    "model": {
+      "description": "Specifies the model name.",
+      "type": "string",
+    },
     "spec": {
       "type": "boolean",
       "description": "Specifies if a spec file is generated.",

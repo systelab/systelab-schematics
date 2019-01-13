@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "dialog": {
+      "description": "A new dialog.",
+      "factory": "./dialog/index#dialog",
+      "schema": "./dialog/schema.json"
+    }
+  }
+}

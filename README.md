@@ -56,3 +56,31 @@ The schematic will:
 - The files: patient-details-grid.ts and patient-details-grid-spec.ts
 
 The name for the selector will be name dashed, and the name of the components will be the name upper camel case.
+
+### Example
+
+FOr a full example run:
+
+```
+cd somelocation
+ng new --style=scss --routing=false simpletest &&
+cd simpletest &&
+npm install -D systelab-schematics &&
+npm install systelab-translate &&
+npm install systelab-preferences &&
+npm install systelab-components &&
+npm install systelab-login &&
+npm install systelab-charts &&
+npm install -D systelab-schematics &&
+cd src &&
+mkdir common &&
+cd common &&
+mkdir components &&
+cd components &&
+ng g systelab-schematics:grid --name="some name" &&
+cd .. &&
+cd .. &&
+cd app &&
+ng g systelab-schematics:dialog --name="some name"
+
+```

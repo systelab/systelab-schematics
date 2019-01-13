@@ -1,6 +1,6 @@
 {
   "name": "systelab-schematics",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "description": "Schematics to generate Systelab Components",
   "private": false,

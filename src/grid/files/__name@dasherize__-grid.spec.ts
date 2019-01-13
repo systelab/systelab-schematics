@@ -1,4 +1,4 @@
-import { <%= classify(name) %> } from './<%= dasherize(name) %>';
+import { <%= classify(name) %>Grid } from './<%= dasherize(name) %>-grid';
 
 describe('<%= classify(name) %>', () => {
 	it('should create an instance', () => {

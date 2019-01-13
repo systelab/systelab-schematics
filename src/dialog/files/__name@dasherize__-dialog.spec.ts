@@ -1,4 +1,4 @@
-import { <%= classify(name) %> } from './<%= dasherize(name) %>';
+import { <%= classify(name) %>Dialog } from './<%= dasherize(name) %>-dialog';
 
 describe('<%= classify(name) %>', () => {
 	it('should create an instance', () => {

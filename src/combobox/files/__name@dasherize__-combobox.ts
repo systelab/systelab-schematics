@@ -15,7 +15,7 @@ export class <%= classify(name) %>ComboBox extends AbstractApiComboBox<<%= class
 	}
 
 	public getInstance() {
-		return new DataFromMyModel();
+		return new <%= classify(name) %>Data();
 	}
 
 	public getDescriptionField(): string {

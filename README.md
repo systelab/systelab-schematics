@@ -52,8 +52,23 @@ ng g systelab-schematics:grid --name="patient details"
 
 The schematic will:
 
-- Generate a patient-details folder
+- Generate a patient-details folder and a grid folder
 - The files: patient-details-grid.ts and patient-details-grid-spec.ts
+
+The name for the selector will be name dashed, and the name of the components will be the name upper camel case.
+
+### Create ComboBox
+
+In order to generate a new combobox based on systelab-components, you must run the following angular cli command
+
+```
+ng g systelab-schematics:combobox --name="patient details"
+```
+
+The schematic will:
+
+- Generate a patient-details folder and a combobox folder
+- The files: patient-details-combobox.ts and patient-details-combobox-spec.ts
 
 The name for the selector will be name dashed, and the name of the components will be the name upper camel case.
 
@@ -78,6 +93,7 @@ cd common &&
 mkdir components &&
 cd components &&
 ng g systelab-schematics:grid --name="some name" &&
+ng g systelab-schematics:combobox --name="some name" &&
 cd .. &&
 cd .. &&
 cd app &&

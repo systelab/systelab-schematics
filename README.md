@@ -1,6 +1,6 @@
-# systelab-schematics
+# Systelab Angular Schematics
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics.
+This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to work with [systelab-components](https://github.com/systelab/systelab-components).
 
 ## Working with the repo
 
@@ -19,9 +19,9 @@ In order to publish the library, an authorized npm user is required. Once set, u
 npm publish
 ```
 
-## Using
+## Using systelab-schematics
 
-In order to use the schematics you much install the following dependency:
+In order to use the schematics you must install the following dependency:
 
 ```
 npm i systelab-schematics

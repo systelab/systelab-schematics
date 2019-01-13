@@ -9,10 +9,10 @@ import { Observable } from 'rxjs';
 	selector: '<%= dasherize(classify(name)) %>-grid',
 	templateUrl: '../../../../../../node_modules/systelab-components/html/abstract-grid.component.html'
 })
-export class <%= classify(name) %>Grid extends AbstractApiGrid<DataFromMyModel> {
+export class <%= classify(name) %>Grid extends AbstractApiGrid<<%= classify(name) %>Data> {
 
 
-	constructor(protected api: MyApiService,
+	constructor(protected api: <%= classify(name) %>Api,
 							protected preferencesService: PreferencesService,
 	            protected i18nService: I18nService,
 	            protected dialogService: DialogService) {
@@ -33,8 +33,8 @@ export class <%= classify(name) %>Grid extends AbstractApiGrid<DataFromMyModel> 
 	}
 
 
-	protected getData(page: number, itemsPerPage: number): Observable<Array<DataFromMyModel>> {
-		return this.api.method(page, itemsPerPage);
+	protected getData(page: number, itemsPerPage: number): Observable<Array<<%= classify(name) %>Data>> {
+		return this.api.get<%= classify(name) %>List(page, itemsPerPage);
 	}
 
 

@@ -16,7 +16,7 @@ export function combobox(options: any): Rule {
 		if (!options.api)
 			options.api=apiName;
 
-		const modelName = strings.classify(options.model)+'Data';
+		const modelName = strings.classify(options.name)+'Data';
 		if (!options.model)
 			options.model=modelName;
 

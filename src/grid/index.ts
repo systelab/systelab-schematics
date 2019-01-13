@@ -1,6 +1,7 @@
-import { apply, filter, MergeStrategy, mergeWith, move, noop, Rule, SchematicContext, template, Tree, url } from '@angular-devkit/schematics';
+import { apply, chain, filter, MergeStrategy, mergeWith, move, noop, Rule, SchematicContext, template, Tree, url } from '@angular-devkit/schematics';
 import { normalize, strings } from '@angular-devkit/core';
 import { setupOptions } from "./setup";
+import { addDeclarationToNgModule } from '../add_to_module';
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
@@ -29,7 +30,14 @@ export function grid(options: any): Rule {
 			move(movePath),
 		]);
 
-		const rule = mergeWith(templateSource, MergeStrategy.Default);
+		const componentPath = `/${options.path}/`
+			+ (options.flat ? '' : strings.dasherize(options.name) + '/grid')
+			+ strings.dasherize(options.name)
+			+ '-grid';
+
+		const rule = chain([
+			addDeclarationToNgModule(options, 'Grid', componentPath),
+			mergeWith(templateSource, MergeStrategy.Default)]);
 
 		return rule(tree, _context);
 	};

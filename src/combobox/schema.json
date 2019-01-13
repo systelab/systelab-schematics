@@ -33,6 +33,10 @@
       "description": "Specifies the model name.",
       "type": "string",
     },
+    "module": {
+      "description": "Specifies the module name.",
+      "type": "string",
+    },
     "spec": {
       "type": "boolean",
       "description": "Specifies if a spec file is generated.",

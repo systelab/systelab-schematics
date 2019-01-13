@@ -17,5 +17,6 @@ export function setupOptions(host: Tree, options: any): Tree {
 	const parsedPath = parseName(options.path, options.name);
 	options.name = parsedPath.name;
 	options.path = parsedPath.path;
+	options.entryComponent = true;
 	return host;
 }

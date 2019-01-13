@@ -34,7 +34,11 @@
       "type": "boolean",
       "description": "Flag to indicate if a directory is created.",
       "default": false
-    }
+    },
+    "module": {
+      "description": "Specifies the module name.",
+      "type": "string",
+    },
   },
   "required": [
     "name"

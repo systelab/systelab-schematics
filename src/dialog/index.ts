@@ -23,6 +23,16 @@ export function dialog(options: any): Rule {
 
 		const rule = mergeWith(templateSource, MergeStrategy.Default);
 
+		_context.logger.info('Run the dialog with:');
+		_context.logger.info('');
+		_context.logger.info('const parameters: '+strings.classify(options.name)+'DialogParameters = '+strings.classify(options.name)+'Dialog.getParameters();');
+		_context.logger.info('parameters.width = 400;');
+		_context.logger.info('this.dialogService.showDialog('+strings.classify(options.name)+'Dialog, parameters)');
+		_context.logger.info('	.subscribe(res => {');
+		_context.logger.info('		this.doSomething();');
+		_context.logger.info('	});');
+		_context.logger.info('');
+
 		return rule(tree, _context);
 	};
 }

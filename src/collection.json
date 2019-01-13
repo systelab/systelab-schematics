@@ -10,6 +10,11 @@
       "description": "A new grid.",
       "factory": "./grid/index#grid",
       "schema": "./grid/schema.json"
+    },
+    "combobox": {
+      "description": "A new combobox.",
+      "factory": "./combobox/index#combobox",
+      "schema": "./combobox/schema.json"
     }
   }
 }

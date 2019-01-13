@@ -27,15 +27,32 @@ In order to use the schematics you must install the following development depend
 npm i -D systelab-schematics
 ```
 
+### Create Modal
+
 In order to generate a new modal based on systelab-components, you must run the following angular cli command
 
 ```
-ng g dialog:dialog --name="patient management"
+ng g systelab-schematics:dialog --name="patient management"
 ```
 
 The schematic will:
 
 - Generate a patient-management folder
-- The files: patient-management-dialog.ts, patient-management-dialog.html and patient-management-dialog.scss
+- The files: patient-management-dialog.ts, patient-management-dialog.spec.ts, patient-management-dialog.html and patient-management-dialog.scss
+
+The name for the selector will be name dashed, and the name of the components will be the name upper camel case.
+
+### Create Grid
+
+In order to generate a new grid based on systelab-components, you must run the following angular cli command
+
+```
+ng g systelab-schematics:grid --name="patient details"
+```
+
+The schematic will:
+
+- Generate a patient-details folder
+- The files: patient-details-grid.ts and patient-details-grid-spec.ts
 
 The name for the selector will be name dashed, and the name of the components will be the name upper camel case.

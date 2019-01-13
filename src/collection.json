@@ -5,6 +5,11 @@
       "description": "A new dialog.",
       "factory": "./dialog/index#dialog",
       "schema": "./dialog/schema.json"
+    },
+    "grid": {
+      "description": "A new grid.",
+      "factory": "./grid/index#grid",
+      "schema": "./grid/schema.json"
     }
   }
 }

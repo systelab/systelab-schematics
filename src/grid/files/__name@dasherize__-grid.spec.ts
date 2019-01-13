@@ -2,6 +2,6 @@ import { <%= classify(name) %> } from './<%= dasherize(name) %>';
 
 describe('<%= classify(name) %>', () => {
 	it('should create an instance', () => {
-		expect(new <%= classify(name) %>Dialog()).toBeTruthy();
+		expect(new <%= classify(name) %>Grid()).toBeTruthy();
 	});
 });

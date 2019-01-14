@@ -15,6 +15,11 @@
       "description": "A new combobox.",
       "factory": "./combobox/index#combobox",
       "schema": "./combobox/schema.json"
+    },
+    "listbox": {
+      "description": "A new listbox.",
+      "factory": "./listbox/index#listbox",
+      "schema": "./listbox/schema.json"
     }
   }
 }

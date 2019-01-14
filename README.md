@@ -24,7 +24,7 @@ npm publish
 In order to use the schematics you must install the following development dependency:
 
 ```
-npm i -D systelab-schematics
+npm install -D systelab-schematics
 ```
 
 ### Create Modal
@@ -81,7 +81,7 @@ If model is not set name upper camel case with the suffix 'Data' will be used.
 
 ### Example
 
-FOr a full example run:
+For a full example run:
 
 ```
 cd somelocation

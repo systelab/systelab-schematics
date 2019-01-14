@@ -10,6 +10,7 @@ export class  <%= classify(name) %>DialogParameters extends SystelabModalContext
 @Component({
     selector: '<%= dasherize(classify(name)) %>-dialog',
     templateUrl: '<%= dasherize(classify(name)) %>-dialog.component.html',
+	  styleUrls: ['<%= dasherize(classify(name)) %>-dialog.component.scss']
 })
 export class <%= classify(name) %>Dialog implements ModalComponent< <%= classify(name) %>DialogParameters> {
 

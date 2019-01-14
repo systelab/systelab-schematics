@@ -31,7 +31,7 @@ export function grid(options: any): Rule {
 		]);
 
 		const componentPath = `/${options.path}/`
-			+ (options.flat ? '' : strings.dasherize(options.name) + '/grid')
+			+ (options.flat ? '' : strings.dasherize(options.name) + '/grid/')
 			+ strings.dasherize(options.name)
 			+ '-grid';
 

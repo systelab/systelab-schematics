@@ -31,7 +31,7 @@ export function combobox(options: any): Rule {
 		]);
 
 		const componentPath = `/${options.path}/`
-			+ (options.flat ? '' : strings.dasherize(options.name) + '/combobox')
+			+ (options.flat ? '' : strings.dasherize(options.name) + '/combobox/')
 			+ strings.dasherize(options.name)
 			+ '-combobox';
 

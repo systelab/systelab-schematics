@@ -26,7 +26,7 @@ export function dialog(options: any): Rule {
 		const componentPath = `/${options.path}/`
 			+ (options.flat ? '' : strings.dasherize(options.name) + '/')
 			+ strings.dasherize(options.name)
-			+ '-dialog';
+			+ '-dialog.component';
 
 		const rule = chain([
 			addDeclarationToNgModule(options, 'Dialog', componentPath),

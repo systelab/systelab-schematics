@@ -33,7 +33,7 @@ export function combobox(options: any): Rule {
 		const componentPath = `/${options.path}/`
 			+ (options.flat ? '' : strings.dasherize(options.name) + '/combobox/')
 			+ strings.dasherize(options.name)
-			+ '-combobox';
+			+ '-combobox.component';
 
 		const rule = chain([
 			addDeclarationToNgModule(options, 'ComboBox', componentPath),

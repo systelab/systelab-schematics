@@ -1,6 +1,6 @@
 import { apply, chain, filter, MergeStrategy, mergeWith, move, noop, Rule, SchematicContext, template, Tree, url } from '@angular-devkit/schematics';
 import { normalize, strings } from '@angular-devkit/core';
-import { setupOptions } from "./setup";
+import { setupOptions } from "../setup";
 import { addDeclarationToNgModule } from '../add_to_module';
 
 // You don't have to export the function as default. You can also have more than one rule factory
@@ -8,6 +8,7 @@ import { addDeclarationToNgModule } from '../add_to_module';
 
 export function dialog(options: any): Rule {
 	return (tree: Tree, _context: SchematicContext) => {
+		options.entryComponent = true;
 		setupOptions(tree, options);
 
 		const movePath = (options.flat) ?

@@ -1,5 +1,4 @@
 import {getWorkspace} from '@schematics/angular/utility/config';
-// import {buildDefaultPath} from '@schematics/angular/utility/project';
 import {parseName} from '@schematics/angular/utility/parse-name';
 import {Tree} from '@angular-devkit/schematics';
 
@@ -17,6 +16,5 @@ export function setupOptions(host: Tree, options: any): Tree {
 	const parsedPath = parseName(options.path, options.name);
 	options.name = parsedPath.name;
 	options.path = parsedPath.path;
-	options.entryComponent = true;
 	return host;
 }

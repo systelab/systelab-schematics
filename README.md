@@ -97,13 +97,13 @@ npm install -D systelab-schematics &&
 cd src &&
 mkdir common &&
 cd common &&
-mkdir components &&
+ng generate module Components && 
 cd components &&
-ng g systelab-schematics:grid --name="some name" &&
-ng g systelab-schematics:combobox --name="some name" &&
+ng g systelab-schematics:grid --name="some name" --module="/src/common/components/components.module.ts" &&
+ng g systelab-schematics:combobox --name="some name" --module="/src/common/components/components.module.ts" &&
 cd .. &&
 cd .. &&
 cd app &&
-ng g systelab-schematics:dialog --name="some name"
+ng g systelab-schematics:dialog --name="some name" --module="/src/app/app.module.ts"
 
 ```

@@ -1,12 +1,13 @@
 import { apply, chain, filter, MergeStrategy, mergeWith, move, noop, Rule, SchematicContext, template, Tree, url } from '@angular-devkit/schematics';
 import { normalize, strings } from '@angular-devkit/core';
-import { setupOptions } from "../setup";
+import { setupOptions, showHelp } from "../setup";
 import { addDeclarationToNgModule } from '../add_to_module';
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
 export function combobox(options: any): Rule {
 	return (tree: Tree, _context: SchematicContext) => {
+		showHelp(_context);
 		options.export = true;
 		setupOptions(tree, options);
 

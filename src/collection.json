@@ -20,6 +20,11 @@
       "description": "A new listbox.",
       "factory": "./listbox/index#listbox",
       "schema": "./listbox/schema.json"
+    },
+    "panel": {
+      "description": "A new panel.",
+      "factory": "./panel/index#panel",
+      "schema": "./panel/schema.json"
     }
   }
 }

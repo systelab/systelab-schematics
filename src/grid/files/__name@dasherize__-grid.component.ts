@@ -4,6 +4,7 @@ import { PreferencesService } from 'systelab-preferences/lib/preferences.service
 import { DialogService } from 'systelab-components/widgets/modal';
 import { I18nService } from 'systelab-translate/lib/i18n.service';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/internal/operators';
 
 @Component({
 	selector: '<%= dasherize(classify(name)) %>-grid',
@@ -34,23 +35,21 @@ export class <%= classify(name) %>Grid extends AbstractApiGrid<<%= model %>> {
 	public getTotalItems() {
 		<% if(paginated) { %>
 		return this.totalItems;
-		<% } %>
-		<% else { %>
+		<% } else { %>
 		return this.api.totalItems;
 		<% } %>
 	}
 
 	protected getData(page: number, itemsPerPage: number): Observable<Array<<%= model %>>> {
 	<% if(paginated) { %>
-	return this.api.<%= classify(name) %>List(page, itemsPerPage)
+	return this.api.get<%= classify(name) %>List(page, itemsPerPage)
 		.pipe(
 			map(value => {
 				this.totalItems = value.totalElements;
 				return value.content;
 			})
 		);
-	<% } %>
-	<% else { %>
+	<% } else { %>
 	return this.api.get<%= classify(name) %>List(page, itemsPerPage);
 	<% } %>
 	}

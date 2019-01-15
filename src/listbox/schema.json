@@ -42,6 +42,11 @@
       "description": "Specifies if a spec file is generated.",
       "default": true
     },
+    "paginated": {
+      "type": "boolean",
+      "description": "Specifies if the api is paginated.",
+      "default": false
+    },
     "flat": {
       "type": "boolean",
       "description": "Flag to indicate if a directory is created.",

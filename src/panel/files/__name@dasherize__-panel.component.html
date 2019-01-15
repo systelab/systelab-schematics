@@ -5,11 +5,12 @@
             <systelab-switch id="switch" name="enabled" [(isChecked)]="active"></systelab-switch>
         </div>
     </div>
-
+    <% for (let i=0;i<10;i++) { %>
     <div class="row mt-1">
         <label for="input1" id="label1" class="col-sm-2 col-form-label text-truncate">{{'COMMON_LABEL1' | translate | async}}</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" [(ngModel)]="model" id="input1" name="nameinput1" placeholder="{{'COMMON_LABEL1' | translate | async}}">
         </div>
-    </div>
+    </div> <% } %>
+
 </form>

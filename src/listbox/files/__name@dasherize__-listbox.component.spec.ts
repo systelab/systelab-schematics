@@ -1,4 +1,4 @@
-import { <%= classify(name) %>ListBox } from './<%= dasherize(name) %>-listbox';
+import { <%= classify(name) %>ListBox } from './<%= dasherize(name) %>-listbox.component';
 
 describe('<%= classify(name) %>', () => {
 	it('should create an instance', () => {

@@ -1,4 +1,4 @@
-import { <%= classify(name) %>ComboBox } from './<%= dasherize(name) %>-combobox';
+import { <%= classify(name) %>ComboBox } from './<%= dasherize(name) %>-combobox.component';
 
 describe('<%= classify(name) %>', () => {
 	it('should create an instance', () => {

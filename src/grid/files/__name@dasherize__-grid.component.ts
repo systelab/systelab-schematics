@@ -11,6 +11,9 @@ import { Observable } from 'rxjs';
 })
 export class <%= classify(name) %>Grid extends AbstractApiGrid<<%= model %>> {
 
+	<% if(paginated) { %>
+	public totalItems = 0;
+	<% } %>
 
 	constructor(protected api: <%= api %>,
 							protected preferencesService: PreferencesService,
@@ -29,14 +32,26 @@ export class <%= classify(name) %>Grid extends AbstractApiGrid<<%= model %>> {
 	}
 
 	public getTotalItems() {
+		<% if(paginated) { %>
+		return this.totalItems;
+		<% } %>
+		<% else { %>
 		return this.api.totalItems;
+		<% } %>
 	}
-
 
 	protected getData(page: number, itemsPerPage: number): Observable<Array<<%= model %>>> {
-		return this.api.get<%= classify(name) %>List(page, itemsPerPage);
+	<% if(paginated) { %>
+	return this.api.<%= classify(name) %>List(page, itemsPerPage)
+		.pipe(
+			map(value => {
+				this.totalItems = value.totalElements;
+				return value.content;
+			})
+		);
+	<% } %>
+	<% else { %>
+	return this.api.get<%= classify(name) %>List(page, itemsPerPage);
+	<% } %>
 	}
-
-
-
 }

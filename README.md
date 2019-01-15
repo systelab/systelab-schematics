@@ -95,7 +95,6 @@ npm install systelab-preferences &&
 npm install systelab-components &&
 npm install systelab-login &&
 npm install systelab-charts &&
-npm install -D systelab-schematics &&
 cd src &&
 mkdir common &&
 cd common &&

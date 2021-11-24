@@ -1,10 +1,9 @@
-import { Component, Input } from '@angular/core';
-import { AbstractApiGrid } from 'systelab-components/widgets/grid/abstract-api-grid.component';
-import { PreferencesService } from 'systelab-preferences/lib/preferences.service';
-import { DialogService } from 'systelab-components/widgets/modal';
-import { I18nService } from 'systelab-translate/lib/i18n.service';
+import { Component } from '@angular/core';
+import { AbstractApiGrid, DialogService } from 'systelab-components';
+import { PreferencesService } from 'systelab-preferences';
+import { I18nService } from 'systelab-translate';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/internal/operators';
+import { map } from 'rxjs/operators';
 
 @Component({
 	selector: '<%= dasherize(classify(name)) %>-grid',

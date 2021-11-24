@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DialogRef, DialogService, ModalComponent, SystelabModalContext } from 'systelab-components/widgets/modal';
+import { DialogRef, DialogService, ModalComponent, SystelabModalContext } from 'systelab-components';
 
 
 export class  <%= classify(name) %>DialogParameters extends SystelabModalContext {

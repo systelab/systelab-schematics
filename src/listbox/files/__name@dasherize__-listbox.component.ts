@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AbstractApiListBox } from 'systelab-components/widgets/listbox/abstract-api-listbox.component';
-import { map } from 'rxjs/internal/operators';
+import { AbstractApiListBox } from 'systelab-components';
+import { map } from 'rxjs/operators';
 
 @Component({
 	selector: '<%= dasherize(classify(name)) %>-combobox',
